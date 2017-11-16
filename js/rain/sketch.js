@@ -15,6 +15,10 @@ function draw() {
 	}
 }
 
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
+
 function Drop() {
 	this.x = random(width);
 	this.y = random(-200, -50);
