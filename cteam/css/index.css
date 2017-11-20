@@ -1,0 +1,597 @@
+@charset "utf-8";
+@import url(fonts.css);
+
+.txt_center {
+  text-align: center;
+}
+
+.txt_right {
+  text-align: right;
+}
+
+.txt_left {
+  text-align: left;
+}
+
+.inner {
+	width: 960px;
+	margin: 0 auto;
+}
+
+.title {
+	font-size: 500%;
+	text-transform: uppercase;
+	font-family: "AvenirNext Bold";
+}
+
+/*---------------------------------------
+		header
+----------------------------------------*/
+
+header {
+	position: fixed;
+	width: 100%;
+	z-index: 999;
+}
+
+header .logo {
+	position: absolute;
+	top: 50%;
+	left: 55px;
+	z-index: 1;
+	margin-top: -15px;
+}
+
+header .btn_menu {
+	display: none;
+}
+
+nav {
+	background: #f87319;
+	overflow: hidden;
+}
+
+nav.blue {
+	background: #0090ff;
+}
+
+nav.green {
+	background: #00b156;
+}
+
+nav.blue li a,
+nav.green li a:hover {
+	color: #fff;
+}
+
+nav ul {
+	width: 750px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+nav li {
+	float: left;
+	width: 150px;
+	text-align: center;
+}
+
+nav li a {
+	font-size: 117%;
+	text-transform: uppercase;
+	font-family: "AvenirNext Demi";
+	font-weight: normal;
+	display: block;
+	color: #fff;
+	position: relative;
+	padding: 30px 0;
+}
+
+nav.scroll li a {
+	padding: 20px 0;
+}
+
+nav li a:after {
+	content: "";
+	background: #fff;
+	height: 2px;
+	width: 0;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	-webkit-transition: all .2s ease-out;
+	   -moz-transition: all .2s ease-out;
+	    -ms-transition: all .2s ease-out;
+	     -o-transition: all .2s ease-out;
+	        transition: all .2s ease-out;
+}
+
+nav li a:hover:after {
+	width: 100%;
+}
+
+nav li a.active:after {
+	content: "";
+	background: #fff;
+	height: 2px;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	-webkit-transition: all .2s ease-out;
+	   -moz-transition: all .2s ease-out;
+	    -ms-transition: all .2s ease-out;
+	     -o-transition: all .2s ease-out;
+	        transition: all .2s ease-out;	
+}
+
+/*---------------------------------------
+		hello
+----------------------------------------*/
+
+#hello {
+	padding: 122px 0 0;
+	background: url(../img/bg-hello.png) no-repeat center center;
+	background-attachment: fixed;
+	background-size: cover;
+	position: relative;
+}
+
+#hello .bg img {
+	width: 100%;
+	height: auto;
+}
+
+#hello h3 {
+	color: #fff;
+	margin-top: 35px;
+	text-shadow: -3px -2px #ae734a;
+}
+
+#hello .bg_line {
+	background: url(../img/img-line_01.png) repeat-x 0 bottom;
+	padding-bottom: 63px;
+}
+
+#hello .animate {
+	padding: 30px 0 100px;
+}
+
+/*---------------------------------------
+		services
+----------------------------------------*/
+
+#services {
+	padding: 160px 0;
+}
+
+#services h2 {
+	color: #f47b28;
+	text-shadow: -3px -2px #bcbec0;
+}
+
+#services .row {
+	position: relative;
+	margin-top: 100px;
+	min-height: 300px;
+}
+
+#services .thumb {
+	width: 50%;
+	float: left;
+}
+
+#services .description {
+	width: 50%;
+	position: absolute;
+	left: 50%;
+	padding-left: 10px;
+}
+
+#services .pos_right .thumb {
+	float: right;
+}
+
+#services .pos_right .description {
+	left: 0;
+	padding-right: 10px;
+}
+
+#services h3 {
+	text-transform: uppercase;
+	font-size: 267%;
+	font-family: "AvenirNext Bold";
+}
+
+#services .txt {
+	font-size: 150%;
+	margin: 30px 0 45px;
+	font-family: "AvenirNext Medium";
+}
+
+#services .items {
+	text-transform: uppercase;
+	font-size: 117%;
+	font-family: "AvenirNext Bold";
+	margin-top: 15px;
+}
+
+/*---------------------------------------
+		work
+----------------------------------------*/
+
+#work {
+	padding: 160px 0 350px;
+	background: url(../img/bg-work.png) no-repeat center center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+#work h2 {
+	color: #fff;
+	text-shadow: -3px -2px #006bc0;
+}
+
+#work .txt {
+	color: #fff;
+	font-size: 184%;
+	font-family: "AvenirNext Demi";
+	margin: 60px 0;
+}
+
+#work .list_button {
+	font-size: 184%;
+	font-family: "AvenirNext Bold";
+	color: #fff;
+	margin-bottom: 60px;
+}
+
+#work .list_button a {
+	color: #fff;
+	margin:  0 10px;
+	text-transform: uppercase;
+	display: inline-block;
+}
+
+#work .list_button a:hover,
+#work .list_button .active {
+	color: #ff9248;
+}
+
+
+#work .work_item {
+	width: 320px;
+	height: 288px;
+}
+
+#work .hover {
+	background: url(../img/bg-hover.png) repeat 0 0;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	-webkit-transition: all .4s ease-in-out;
+	   -moz-transition: all .4s ease-in-out;
+	    -ms-transition: all .4s ease-in-out;
+	     -o-transition: all .4s ease-in-out;
+	        transition: all .4s ease-in-out;
+	-webkit-transform: scale(0);
+	   -moz-transform: scale(0);
+	    -ms-transform: scale(0);
+	     -o-transform: scale(0);
+	        transform: scale(0);
+}
+
+#work .info {
+	position: absolute;
+	width: 100%;
+	top: 35%;
+	left: 0;
+	text-align: center;
+	-webkit-transition: all .4s ease-in-out;
+	   -moz-transition: all .4s ease-in-out;
+	    -ms-transition: all .4s ease-in-out;
+	     -o-transition: all .4s ease-in-out;
+	        transition: all .4s ease-in-out;
+}
+
+#work .hover .link {
+	display: block;
+	color: #fff;
+	font-size: 184%;
+	font-family: "AvenirNext Demi";
+	margin: 0 35px 25px;
+	padding-bottom: 18px;
+	border-bottom: 1px solid #fff;
+}
+
+#work .hover .name {
+	color: #fff;
+	font-size: 117%;
+	font-family: "AvenirNext Medium";
+}
+
+#work .hover .link:hover {
+	text-shadow: 0 0 10px #fff;
+}
+
+#work .show_more {
+	padding: 66px 0 40px;
+	display: none;
+}
+
+#work .work_item:hover .hover {
+	opacity: 1;
+	-webkit-transform: scale(1);
+	   -moz-transform: scale(1);
+	    -ms-transform: scale(1);
+	     -o-transform: scale(1);
+	        transform: scale(1);
+}
+
+/*---------------------------------------
+		about_us
+----------------------------------------*/
+
+#about_us {
+	background: #00b156;
+	padding: 110px 0 0;
+}
+
+#about_us .bg_line {
+	background: url(../img/img-line_03.png) repeat-x center bottom;
+	padding-bottom: 161px;
+}
+
+#about_us .inner {
+	position: relative;
+}
+
+/*--------------------------------------------
+ animate about us 
+--------------------------------------------*/
+
+#about_us .animate {
+	position: absolute;
+	top: -318px;
+	width: 658px;
+	left: 50%;
+	margin-left: -329px;
+}
+
+#about_us .animate span {
+	display: block;
+	position: absolute;
+}
+
+#about_us .animate .hand_01 {
+  top: 180px;
+  left: 12px;
+}
+
+#about_us .animate .hand_02 {
+  top: 130px;
+  left: 155px;
+}
+
+#about_us .animate .hand_03 {
+	top: 196px;
+	left: 230px;
+}
+
+#about_us .animate .hand_04 {
+  top: 196px;
+  left: 335px;
+}
+
+#about_us .animate .hand_05 {
+	top: 155px;
+	left: 390px;
+}
+
+#about_us .animate .hand_06 {
+  top: 175px;
+  left: 575px;
+}
+
+#about_us h2 {
+	color: #fff;
+	text-shadow: -3px -2px #008441;
+}
+
+#about_us .txt {
+	color: #fff;
+	font-size: 184%;
+	font-family: "AvenirNext Demi";
+	margin: 60px 0;
+}
+
+#about_us .member_list span {
+	display: block;
+}
+
+#about_us .member_list ul {
+	overflow: hidden;
+	text-align: center;
+}
+
+#about_us .member_list li {
+	float: left;
+	margin: 0 48px 67px 0;
+	position: relative;
+	width: 288px;
+	height: 288px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+#about_us .member_list li:nth-child(3n+3) {
+	margin: 0 0 67px 0;
+}
+
+#about_us .member_list .step_01 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	-webkit-transition: all .4s ease-in-out;
+	   -moz-transition: all .4s ease-in-out;
+	    -ms-transition: all .4s ease-in-out;
+	     -o-transition: all .4s ease-in-out;
+	        transition: all .4s ease-in-out;
+}
+
+#about_us .member_list .step_02 {
+	background: url(../img/bg-hover.png) repeat 0 0;
+	width: 288px;
+	height: 288px;
+	border-radius: 50%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	-webkit-transition: all .4s ease-in-out .4s;
+	   -moz-transition: all .4s ease-in-out .4s;
+	    -ms-transition: all .4s ease-in-out .4s;
+	     -o-transition: all .4s ease-in-out .4s;
+	        transition: all .4s ease-in-out .4s;
+	-webkit-transform: scale(0);
+	   -moz-transform: scale(0);
+	    -ms-transform: scale(0);
+	     -o-transform: scale(0);
+	        transform: scale(0);
+}
+
+#about_us .member_list li:hover .step_01 {
+	opacity: 1;
+}
+
+#about_us .member_list li:hover .step_02 {
+	opacity: 1;
+	-webkit-transform: scale(1);
+	   -moz-transform: scale(1);
+	    -ms-transform: scale(1);
+	     -o-transform: scale(1);
+	        transform: scale(1);
+}
+
+#about_us .name {
+	color: #fff;
+	font-size: 184%;
+	font-family: "AvenirNext Demi";
+	margin: 100px 19px 25px;
+	padding-bottom: 18px;
+	border-bottom: 1px solid #fff;
+	text-transform: uppercase;
+}
+
+#about_us .job {
+	color: #fff;
+	font-size: 117%;
+	font-weight: normal;
+	font-family: "AvenirNext Medium";
+}
+
+/*---------------------------------------
+		header
+----------------------------------------*/
+
+/*---------------------------------------
+		contact
+----------------------------------------*/
+
+#contact {
+	background: #282828;
+	padding: 250px 0;
+}
+
+#contact .inner {
+	position: relative;
+}
+
+#contact h2 {
+	color: #f47b28;
+	margin-bottom: 60px;
+	text-shadow: -3px -2px #1d1e1e;
+}
+
+#contact .txt {
+	color: #fff;
+	font-size: 167%;
+	margin: 0 0 60px 0;
+	font-weight: normal;
+	line-height: 35px;
+}
+
+#contact .number {
+	color: #fff;
+	font-family: "AvenirNext Regular";
+	font-size: 375%;
+	line-height: 70px;
+}
+
+#contact .social {
+	position: absolute;
+	bottom: -150px;
+	right: 0;
+	width: 250px;
+	height: 220px;
+	overflow: hidden;
+}
+
+#contact .social li {
+	position: absolute;
+	-webkit-transition: all .5s ease-in-out;
+	   -moz-transition: all .5s ease-in-out;
+	    -ms-transition: all .5s ease-in-out;
+	     -o-transition: all .5s ease-in-out;
+	        transition: all .5s ease-in-out;
+}
+
+#contact .youtube {
+	top: 0;
+	right: -50px;
+}
+
+#contact .youtube.run {
+	right: 0;
+}
+
+#contact .facebook {
+	top: -50px;
+	right: 100px;
+}
+
+#contact .facebook.run {
+	top: 30px;
+}
+
+#contact .twitter {
+	top: 100px;
+	left: -55px;
+}
+
+#contact .twitter.run {
+	left: 25px;
+}
+
+#contact .gmail {
+	bottom: 0;
+	left: -50px;
+}
+
+#contact .gmail.run {
+	left: 0;
+}
+
+#contact .logo {
+	right: 0;
+	bottom: 30px;
+}
+
+#contact .copyright {
+	margin-top: 50px;
+	color: #cdcdcd;
+}
