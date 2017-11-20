@@ -4,9 +4,15 @@
 ----------------------------------------*/
 html{overflow-y:scroll;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;}table{border-collapse:collapse;border-spacing:0;}caption,th{text-align:left;}q:before,q:after{content:'';}object,embed{vertical-align:top;}hr,legend{display:none;}h1,h2,h3,h4,h5,h6{font-size:100%;}img,abbr,acronym,fieldset{border:0;}ul li{list-style-type:none;}a,label{cursor:pointer;}img{vertical-align:bottom;margin:0;padding:0;}
 
+@font-face {
+  font-family: "Roboto-Light";
+  src: url("/share/fonts/Roboto-Light.ttf");
+}
+
 body {
-  font-family: 'Lucida Grande','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',Meiryo,メイリオ,sans-serif;
-  font-size: 76%;
+  font-family: "Roboto-Light";
+  /* font-family: 'Lucida Grande','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',Meiryo,メイリオ,sans-serif; */
+  font-size: 14px;
   background: #f3f3f3;
 }
 
@@ -39,8 +45,23 @@ a:hover {
   color: #FFF;
 }
 
+img {
+  max-width: 100%;
+}
+
 canvas {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 960px) {
+  .inner {
+    padding: 0 10px;
+  }
 }
