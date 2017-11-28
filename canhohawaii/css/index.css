@@ -1,0 +1,482 @@
+@charset "utf-8";
+@import url(font-face.css);
+html{overflow-y:scroll;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;}table{border-collapse:collapse;border-spacing:0;}caption,th{text-align:left;}q:before,q:after{content:'';}object,embed{vertical-align:top;}hr,legend{display:none;}h1,h2,h3,h4,h5,h6{font-size:100%;}img,abbr,acronym,fieldset{border:0;}ul li{list-style-type:none;}a,label{cursor:pointer;}img{vertical-align:bottom;margin:0;padding:0;}
+.clearfix:after {
+  content:".";display:block;visibility:hidden;height:0.1px;font-size:0.1em;line-height:0;clear:both;
+}
+
+a {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease; 
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+/*===================================================
+  header
+===================================================*/
+header {
+  background: url(../img/bg-top.png) no-repeat 0 bottom;
+  background-size: cover;
+}
+header .header_inner {
+  background: url(../img/bg-line.png) no-repeat 0 bottom;
+  background-size: 100% auto;
+}
+header .logo {
+  display: inline-block;
+  margin: 25px 0 21px;
+}
+header .logo img {
+  margin-left: 70px;
+}
+header .logo_hawaii {
+  text-align: right;
+  margin-bottom: 75px;
+}
+header .logo_hawaii img {
+  display: inline-block;
+  margin-right: 180px;
+}
+header .container {
+  height: 730px;
+}
+section .introduce {
+  width: 100%;
+  max-width: 945px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0 7%;
+}
+section .introduce h2 {
+  text-align: center;
+  font-family: "RobotoSlab Regular";
+  font-weight: normal;
+  font-size: 27px;
+  position: relative;
+  margin-bottom: 50px;
+}
+section .introduce .intro li {
+  font-size: 18px;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 20px;
+}
+section .introduce .intro li:before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  top: 10px;
+}
+section .introduce .intro li strong {
+  font-family: "OpenSans Bold";
+  font-size: 25px;
+  font-weight: normal;
+  color: #a77d12;
+}
+section .introduce .intro a {
+  display: block;
+  color: #404041;
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 15px;
+  background: url(../img/ico-arrow.png) no-repeat 95% center #fff;
+}
+section .introduce h2:after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 60px;
+  bottom: -20px;
+  left: 110px;
+}
+section .introduce .intro h2:after {
+  background: #ffffff;
+}
+section .introduce .intro {
+  width: 360px;
+  padding: 25px 34px;
+  border-radius: 15px;
+  background: url(../img/bg-intro.png) repeat 0 0;
+  margin: 0 auto;
+}
+section .introduce .register {
+  width: 360px;
+  float: right;
+  padding: 25px 34px;
+  border-radius: 15px;
+  background: url(../img/bg-register.png) repeat 0 0;
+  margin: 0 auto;
+}
+section .introduce .register h2:after {
+  background: #f2cf76;
+}
+section .introduce .register dl {
+  margin-bottom: 13px;
+}
+section .introduce .register dt {
+  font-family: "OpenSans Semibold";
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-weight: normal;
+}
+section .introduce .register input[type="text"] {
+  border-radius: 5px;
+  border: 1px solid #dcdcdc;
+  padding: 10px 5px;
+  width: 98%;
+}
+section .introduce .register input[type="checkbox"] {
+  display: none;
+}
+section .introduce .register label {
+  position: relative;
+  padding-left: 27px;
+}
+section .introduce .register label:before {
+  content: "";
+  position: absolute;
+  background: url(../img/ico-checkbox.png) no-repeat 0 0;
+  width: 20px;
+  height: 20px;
+  left: 0;
+  top: 0;
+}
+section .introduce .register input[type="checkbox"]:checked + label:before {
+  content: "";
+  position: absolute;
+  background: url(../img/ico-checked.png) no-repeat 0 0;
+  width: 20px;
+  height: 20px;
+  left: 0;
+  top: 0;
+}
+section .introduce .register input[type="submit"] {
+  text-align: center;
+  padding: 10px 0;
+  display: block;
+  width: 100%;
+  border: none;
+  color: #fff;
+  background: #f2cf76;
+  border-radius: 15px;
+  margin-top: 5px;
+}
+/*===================================================
+  footer
+===================================================*/
+footer {
+  background: #f6f2ef;
+  padding: 45px 0 0;
+}
+footer h2 {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+footer .contact_info {
+  margin-bottom: 30px;
+}
+footer .contact_info li {
+  padding:3px 0 3px 40px;
+}
+footer .contact_info .address {
+  background: url(../img/ico-address.png) no-repeat left 5px;
+}
+footer .contact_info .phone_number {
+  background: url(../img/ico-phone_number.png) no-repeat left 5px;
+}
+footer .contact_info .email {
+  background: url(../img/ico-email.png) no-repeat left 5px;
+}
+footer .follow {
+  margin-left: 30px;
+}
+footer .other_logo ul {
+  display: table;
+  width: 100%;
+}
+footer .other_logo ul li {
+  display: table-cell;
+  vertical-align: bottom;
+}
+footer .regis_btn {
+  text-align: right;
+  margin-top: 10px;
+}
+footer .regis_btn a {
+  display: inline-block;
+}
+/*===================================================
+  section
+===================================================*/
+.section_inner {
+  max-width: 780px;
+  margin: 0 auto;
+}
+.section_inner .description {
+  text-align: center;
+  padding: 50px 0 60px;
+}
+.description h2 {
+  font-size: 27px;
+}
+.description h3 {
+  margin: 20px 0 45px;
+}
+.description .txt {
+  font-size: 17px;
+  margin-top: 25px;
+}
+.tabchange .nav-tabs {
+  border: none;
+  margin-bottom: 45px;
+}
+.tabchange .nav-tabs > li {
+  margin-right: 15px;
+}
+.tabchange .nav-tabs > li:first-child {
+  margin-left: 75px;
+}
+.tabchange .nav-tabs > li:last-child {
+  margin-right: 0;
+}
+.nav-tabs > li > a {
+  margin: 0;
+  width: 195px;
+  border-radius: 5px;
+  display: block;
+  text-align: center;
+  padding: 10px 0;
+  border: 1px solid #f2cf76;
+  color: #f2cf76;
+  font-size: 20px;
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus, .nav > li > a:hover, .nav > li > a:focus, .nav-tabs > li > a:hover {
+  color: #fff;
+  cursor: pointer;
+  background-color: #f2cf76;
+  border: 1px solid #f2cf76;
+}
+#menu1,
+#menu2 {
+  padding-bottom: 45px;
+}
+#menu3 {
+  padding-bottom: 150px;
+}
+
+#menu3 .row {
+  padding: 25px 0;
+}
+
+#menu3 .row .col-sm-6:nth-child(1) {
+  padding: 0 75px 0 0;
+}
+
+#menu3 .row .col-sm-6:nth-child(2) {
+  padding: 0 0 0 75px;
+}
+
+#menu3 .row dt {
+  margin-bottom: 12px;
+}
+
+#menu3 .row dd {
+  font-size: 17.1px;
+}
+
+.error-message-show {
+    color: red;
+    margin-top: 5px;
+}
+
+#overlay {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0.75;
+}
+
+#popup {
+  width: 420px;
+  height: 631px;
+  position: absolute;
+  top: 50%;
+  margin-top: -315px;
+  left: 50%;
+  margin-left: -210px;
+  z-index: 1000;
+}
+
+#popup img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#popup .btn_close {
+  position: absolute;
+  right: 0;
+  top: 60px;
+  background: url(../img/ico-close.png) no-repeat right center;
+  padding-right: 20px;
+  color: #fff;
+  font-size: 16px;
+}
+
+.img-control {
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 992px) {
+  header .container {
+    height: 660px;
+  }
+  section .introduce{
+    padding: 0;
+  }
+  section .introduce .intro {
+    width: auto;
+    padding: 15px 10px;
+    border-radius: 15px;
+    background: url(../img/bg-intro.png) repeat 0 0;
+    margin-bottom: 20px;
+  }
+  section .introduce .col-sm-6 {
+    padding: 0;
+  }
+  section .introduce .intro li {
+    font-size: 16px;
+    padding-left: 15px;
+    margin-bottom: 15px;
+  }
+  section .introduce h2 {
+    margin-bottom: 40px;
+  }
+  section .introduce .register {
+    width: auto;
+    float: none;
+    padding: 15px 10px;
+    border-radius: 15px;
+    background: url(../img/bg-register.png) repeat 0 0;
+  }
+  #menu3 .row {
+    padding: 0;
+  }
+  #menu3 .row dl {
+    padding: 10px 0;
+  }
+  footer .follow {
+    margin: 0 0 25px 0; 
+  }
+
+  .tabchange .nav-tabs {
+    border: none;
+    margin-bottom: 25px;
+    display: table;
+    width: 100%;
+  }
+  .tabchange .nav-tabs > li {
+    margin-right: 0;
+    display: table-cell;
+    float: none;
+    width: 33%;
+  }
+  .tabchange .nav-tabs > li:first-child {
+    margin-left: 0;
+  }
+  .tabchange .nav-tabs > li:last-child {
+    margin-right: 0;
+  }
+  .nav-tabs > li > a {
+    margin: 0;
+    width: 100%;
+    border-radius: 5px;
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    border: 1px solid #f2cf76;
+    color: #f2cf76;
+    font-size: 14px;
+  }
+  .section_inner .description {
+    padding: 50px 15px 60px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header .container {
+    height: 545px;
+  }
+  body {
+    overflow: hidden;
+  }
+  header .logo {
+    width: 100%;
+    text-align: center;
+  }
+  header .logo img {
+    margin-left: 0;
+    display: inline-block;
+  }
+  section .introduce .intro a {
+    font-size: 12px;
+  }
+  header .logo_hawaii {
+    text-align: center;
+    margin-bottom: 55px;
+  }
+  header .logo_hawaii img {
+    margin-right: 0;
+    width: 180px;
+  }
+
+  section .introduce h2:after {
+    left: 50%;
+    margin-left: -30px;
+  }
+  .description .txt {
+    font-size: 15px;
+    margin-top: 15px;
+  }
+  .description h3 {
+    margin: 20px 0 35px;
+  }
+  #popup {
+    width: 100%;
+    height: auto;
+    margin-top: -220px;
+    left: 0;
+    margin-left: 0;
+  }
+
+  #popup img {
+    width: 100%;
+    height: auto;
+  }
+  #menu3 {
+    padding: 0 15px;
+  }
+
+  #menu3 .row .col-sm-6:nth-child(1) {
+    padding: 0 15px;
+  }
+
+  #menu3 .row .col-sm-6:nth-child(2) {
+    padding: 0 15px;
+  }
+
+}
