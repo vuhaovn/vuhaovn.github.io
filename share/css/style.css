@@ -77,6 +77,8 @@ header {
     color: #1ABC9C; }
     .main_item a:hover {
       text-decoration: underline; }
+  .main_item .salary {
+    font-size: 20px; }
 
 footer {
   background: #555; }
