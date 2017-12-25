@@ -18,12 +18,13 @@
 	position: relative;
 }
 
-.item:hover {
+.item:hover,
+.item.active {
 	background-color: #bfc4ba;
 }
 
 .sub_item {
-	display: none;
+	/* display: none; */
 }
 
 .btn_option {
@@ -47,7 +48,8 @@
 	display: block;
 }
 
-.btn_option:hover {
+.btn_option:hover,
+.active .btn_option {
 	color: #fff;
 }
 
@@ -93,7 +95,7 @@
 }
 
 .form {
-	position: absolute;
+	position: relative;
 	width: 100%;
 	top: 0;
 	left: 0;
