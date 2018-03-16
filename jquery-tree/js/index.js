@@ -6,17 +6,79 @@
 		$item = $(".item");
 
 	function init() {
-		hover($item);
-		according($item);
+		hover();
+		according();
+		// chooseOption();
 		addDom();
 	}
 
-	function hover(item) {
+	function addDom() {
+		var data = [];
+	}
+
+	function chooseOption(item) {
+		var 
+			folder_option = '<ul class="file_list">';
+			folder_option +='<li data-action="new_folder">New Folder</li>';
+			folder_option +='<li data-action="new_file">New File</li>';
+			folder_option +='<li data-action="rename">Rename</li>';
+			folder_option +='<li data-action="delete">Delete</li>';
+			folder_option +='</ul>';
+
+		var
+			file_option = '<ul class="file_list">';
+			file_option +='<li data-action="rename">Rename</li>';
+			file_option +='<li data-action="delete">Delete</li>';
+			file_option +='</ul>';
+
+		var
+			xform = '<div class="form"><input type="text" name="txt_name">';
+			xform += '<button id="submit">&#43;</button>';
+			xform += '<button id="cancel">&times;</button></div>';
+
+		var data = [];
+
+		$(".btn_option").on("click", function() {
+			$(item).addClass("active");
+			$(item).append(xform);
+
+			$("input[name='txt_name']").keyup(function() {
+				if ($(this).val().length > 0) {
+					$("#submit").show();
+					$("#cancel").hide();
+				} else {
+					$("#cancel").show();
+					$("#submit").hide();
+				}
+			});
+			
+			$(item).find("#submit").click(function() {
+				var name = $("input[name='txt_name']").val();
+				data.push(name);
+			});
+			// console.log( $(this).prev().html() );
+		});
+
+
+		$(document).mouseup(function(e) {
+		  var container = $(".btn_option");
+		  if (!container.is(e.target) && container.has(e.target).length === 0) {
+				$(item).find(".file_list").hide();
+				$(item).removeClass("active");
+				setTimeout(function() {
+					$(item).find(".file_list").remove();
+				}, 1000);
+		  }
+		});
+	}
+
+	function hover() {
 		var
 			button = "<div class='btn_option'>&#9679;&#9679;&#9679;</div>";
-		item.on({
+		$item.on({
 			"mouseenter": function() {
 				$(this).append(button);
+				chooseOption($(this));
 			},
 			"mouseleave": function() {
 				$(this).find(".btn_option").remove();
@@ -24,91 +86,9 @@
 		});
 	}
 
-	function list($items) {
-		var 
-			foOpt = '<ul class="file_list">';
-			foOpt +='<li data-action="new_folder">New Folder</li>';
-			foOpt +='<li data-action="new_file">New File</li>';
-			foOpt +='<li data-action="rename">Rename</li>';
-			foOpt +='<li data-action="delete">Delete</li>';
-			foOpt +='</ul>';
-
-		var
-			fiOpt = '<ul class="file_list">';
-			fiOpt +='<li data-action="rename">Rename</li>';
-			fiOpt +='<li data-action="delete">Delete</li>';
-			fiOpt +='</ul>';
-
-		$(".btn_option").on("click", function() {
-			$items.addClass("active");
-			if ($items.data("type") == "folder") {
-				$items.append(foOpt);
-				addDom($items);
-			} else {
-				$items.append(fiOpt);
-			}
-		});
-
-		$(document).mouseup(function(e) {
-		  var container = $(".btn_option");
-		  if (!container.is(e.target) && container.has(e.target).length === 0) {
-				$items.find(".file_list").hide();
-				$items.removeClass("active");
-				setTimeout(function() {
-					$items.find(".file_list").remove();
-				}, 1000);
-		  }
-		});
-
-	}
-
-	function addDom() {
-		var item = "";
-		$("#addFolder").click(function() {
-			item += '<div class="sub_item">';
-			item += '<div class="item" data-type="folder"><span class="icon_close">css</span></div>';
-			item += '</div>';
-			$item.append(item);
-		});
-	}
-
-	function action($li, $items) {
-		// var
-		// 	folder = '<div class="sub_item">';
-		// 	folder += '<div class="item" data-type="folder"><span class="icon_close">css</span></div>';
-		// 	folder += '</div>';
-
-		// var
-		// 	file = '<div class="sub_item">';
-		// 	file += '<div class="item" data-type="file"><span class="icon_file">index.html</span></div>';
-		// 	file += '</div>';
-
-		$("input[name='txt_name']").keyup(function() {
-			if ($(this).val().length > 0) {
-				$("#submit").show();
-				$("#cancel").hide();
-			} else {
-				$("#cancel").show();
-				$("#submit").hide();
-			}
-		});
-
-		$("#submit").click(function() {
-			$items.after(folder);
-			$items.find(".form").remove();
-			console.log($.parseHTML(folder).find(".item"));
-			hover($items);
-			according($items);
-		});
-
-		$("#cancel").click(function() {
-			$this.find(".form").remove();
-		});
-	}
-
-	function according(item) {
-		item.next(".sub_item").css("padding-left", padding+"px");
-		item.click(function(e) {
+	function according() {
+		$item.next(".sub_item").css("padding-left", padding+"px");
+		$item.click(function(e) {
 			var $ele = $("span");
 			if ($ele.is(e.target)) {
 				var isOpen = $(this).children("span").hasClass("open");

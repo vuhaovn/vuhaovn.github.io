@@ -101,6 +101,17 @@
 				$(this).next(".sub_item").stop().slideToggle(50);
 			}
 		});
+
+				// $(document).mouseup(function(e) {
+		//   var container = $(".btn_option");
+		//   if (!container.is(e.target) && container.has(e.target).length === 0) {
+		// 		$items.find(".file_list").hide();
+		// 		$items.removeClass("active");
+		// 		setTimeout(function() {
+		// 			$items.find(".file_list").remove();
+		// 		}, 1000);
+		//   }
+		// });
 	}
 
 	$(function() {
