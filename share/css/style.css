@@ -6,6 +6,12 @@ header {
   header .info {
     float: left;
     width: 62.5%; }
+    header .info .info_item {
+      display: flex;
+      margin-bottom: 10px; }
+      header .info .info_item dt {
+        padding-right: 10px;
+        font-weight: bold; }
     @media screen and (max-width: 640px) {
       header .info {
         width: 100%;
@@ -66,13 +72,14 @@ header {
     margin-bottom: 10px;
     color: #fff;
     background: #993838; }
-  .main_item dl {
+  .main_item dt, .main_item p, .main_item dl, .main_item b, .main_item a {
     margin-bottom: 10px; }
   .main_item dt {
     color: #993838;
     font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 5px; }
+    font-weight: bold; }
+  .main_item a, .main_item b {
+    display: inline-block; }
   .main_item a {
     color: #1ABC9C; }
     .main_item a:hover {
