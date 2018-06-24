@@ -1,0 +1,32 @@
+{
+  "particles": {
+    "number": {
+      "value": 300
+    },
+    "opacity": {
+      "random": true,
+      "anim": {
+        "enable": true,
+        "speed": 1
+      }
+    },
+    "shape": {
+      "type": "triangle"
+    },
+    "size": {
+      "value": 1
+    },
+    "interactivity": {
+      "events": {
+        "onhover": {
+          "enable": true,
+          "mode": "grab"
+        },
+        "onclick": {
+          "enable": true,
+          "mode": "push"
+        }
+      }
+    }
+  }
+}
