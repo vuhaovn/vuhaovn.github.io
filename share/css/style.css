@@ -15,7 +15,8 @@ header {
   padding: 20px 0; }
   header .info {
     float: left;
-    width: 62.5%; }
+    width: 62%;
+    background-color: black; }
     header .info .info_item {
       display: flex;
       margin-bottom: 10px; }
@@ -30,7 +31,7 @@ header {
         margin-bottom: 10px; } }
   header .avatar {
     float: right;
-    width: 36.45833%; }
+    width: 36%; }
     @media screen and (max-width: 640px) {
       header .avatar {
         width: 100%; }
